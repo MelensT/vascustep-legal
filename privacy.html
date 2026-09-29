@@ -40,8 +40,8 @@
   <div class="wrap">
     <div style="font-size:30px">🚶</div>
     <div>
-      <h1>VascuStep — Politique de confidentialité</h1>
-      <div class="sub">Dernière mise à jour : 19 août 2026</div>
+      <h1 id="page-title">VascuStep — Politique de confidentialité</h1>
+      <div class="sub" id="page-updated">Dernière mise à jour : 29 septembre 2026</div>
     </div>
   </div>
 </header>
@@ -75,7 +75,7 @@
     <tr><th>Catégorie</th><th>Détail</th></tr>
     <tr>
       <td><strong>Profil</strong></td>
-      <td>Âge, sexe, facteurs de risque cardiovasculaire que vous déclarez (diabète, tabagisme, hypertension, etc.). <em>Aucun nom, aucune adresse, aucun e-mail, aucun numéro de registre national.</em></td>
+      <td>Âge, sexe, facteurs de risque cardiovasculaire que vous déclarez (diabète, tabagisme, hypertension, etc.). <em>Aucun nom, aucune adresse, aucun e-mail, aucun numéro de registre national.</em> Si vous participez à une étude, le <strong>code d'étude</strong> facultatif que l'équipe de recherche vous a remis (par exemple VS-001).</td>
     </tr>
     <tr>
       <td><strong>Séances de marche</strong></td>
@@ -98,19 +98,20 @@
     <p><strong>Localisation en arrière-plan.</strong> Pour que la mesure continue quand votre écran est verrouillé ou que votre téléphone est dans votre poche, l'application peut accéder à votre position même lorsqu'elle n'est pas à l'écran. Cet accès vous est expliqué dans l'application avant toute demande d'autorisation, et vous pouvez le refuser : la séance fonctionnera alors uniquement avec l'application ouverte à l'écran.</p>
     <p style="margin-bottom:0"><strong>Aucun trajet n'est enregistré.</strong> Seule la distance totale de la séance est conservée. Vos coordonnées GPS ne quittent jamais votre téléphone à cette fin, ne sont pas historisées, ne sont pas partagées et ne servent à aucun ciblage publicitaire.</p>
   </div>
-  <p>Une exception, avec votre autorisation de localisation : pour afficher les conseils météo adaptés à votre séance, une position <strong>approximative</strong> est transmise au service <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Cette requête ne contient aucune donnée de santé ni aucun identifiant vous concernant.</p>
+  <p>Une exception, avec votre autorisation de localisation : pour afficher les conseils météo adaptés à votre séance, une position <strong>approximative</strong>, arrondie à environ 1 km, est transmise au service <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Cette requête ne contient aucune donnée de santé ni aucun identifiant vous concernant.</p>
 
   <h2>4. Finalités et base légale</h2>
   <ul>
     <li><strong>Assurer le fonctionnement de l'application</strong> (enregistrer et afficher vos séances, votre progression, vos rapports) — base légale : votre <strong>consentement explicite</strong> (art. 6.1.a et art. 9.2.a du RGPD), recueilli lors de la première utilisation.</li>
     <li><strong>Vous permettre de partager un rapport avec votre médecin</strong>, si vous choisissez de l'exporter.</li>
+    <li><strong>Le suivi d'une étude</strong>, uniquement si vous avez saisi un code d'étude : l'équipe de recherche consulte alors vos données sous ce code, sans connaître votre identité — même base légale.</li>
   </ul>
   <p>Vos données ne sont utilisées à <strong>aucune autre fin</strong> : ni publicité, ni profilage, ni revente, ni prise de décision automatisée.</p>
 
   <h2>5. Où sont stockées vos données</h2>
   <ul>
     <li><strong>Sur votre téléphone</strong>, dans le stockage privé de l'application.</li>
-    <li><strong>Sur un serveur Supabase</strong> (Supabase Inc.), hébergé dans la région <span id="fr-region">de Francfort, Allemagne (Union européenne — eu-central-1)</span>, afin que vos séances ne soient pas perdues. L'accès à vos enregistrements est verrouillé par des règles de sécurité au niveau de la ligne (<em>Row Level Security</em>) : seul votre appareil peut lire vos données.</li>
+    <li><strong>Sur un serveur Supabase</strong> (Supabase Inc.), hébergé dans la région <span id="fr-region">de Francfort, Allemagne (Union européenne — eu-central-1)</span>, afin que vos séances ne soient pas perdues. L'accès est verrouillé par des règles de sécurité au niveau de la ligne (<em>Row Level Security</em>) : votre appareil ne peut lire que vos propres données, et aucun autre utilisateur ne peut y accéder. Le responsable du traitement dispose d'un accès administrateur protégé, réservé à la maintenance technique et, si vous avez saisi un code d'étude, au suivi de l'étude.</li>
   </ul>
   <p>La connexion au serveur est <strong>anonyme</strong> : l'application crée un identifiant technique aléatoire, sans e-mail ni mot de passe. Vos enregistrements ne sont donc rattachés à aucune identité civile.</p>
 
@@ -120,11 +121,12 @@
     <tr><th>Prestataire</th><th>Rôle</th><th>Données reçues</th></tr>
     <tr><td>Supabase Inc.</td><td>Hébergement de la base de données</td><td>Profil, séances, résultats WIQ (sans identité)</td></tr>
     <tr><td>Open-Meteo</td><td>Prévisions météo</td><td>Position approximative uniquement</td></tr>
+    <tr><td>Expo (650 Industries Inc.)</td><td>Mises à jour de l'application</td><td>Données techniques de l'appareil (adresse IP, version de l'application et du système), aucune donnée de santé</td></tr>
   </table>
   <p>Aucune donnée n'est vendue, louée, ni transmise à des régies publicitaires, des courtiers en données, des assureurs ou des employeurs.</p>
 
   <h2>7. Durée de conservation</h2>
-  <p>Vos données sont conservées tant que vous utilisez l'application. Elles sont supprimées dès que vous en faites la demande — voir la section suivante. Si vous désinstallez l'application sans supprimer vos données, la copie serveur est effacée au plus tard <strong>24 mois</strong> après votre dernière séance.</p>
+  <p>Vos données sont conservées jusqu'à ce que vous les supprimiez. Elles sont effacées dès que vous en faites la demande — voir la section suivante. Pensez à les supprimer depuis l'application avant de la désinstaller : la désinstallation seule n'efface pas la copie serveur.</p>
 
   <h2>8. Supprimer vos données</h2>
   <p>Dans l'application : <strong>Profil → Supprimer toutes mes données</strong>. L'effacement est immédiat et définitif, sur votre téléphone comme sur le serveur.</p>
@@ -170,7 +172,7 @@
     <tr><th>Categorie</th><th>Detail</th></tr>
     <tr>
       <td><strong>Profiel</strong></td>
-      <td>Leeftijd, geslacht, cardiovasculaire risicofactoren die u zelf opgeeft (diabetes, roken, hypertensie, enz.). <em>Geen naam, geen adres, geen e-mailadres, geen rijksregisternummer.</em></td>
+      <td>Leeftijd, geslacht, cardiovasculaire risicofactoren die u zelf opgeeft (diabetes, roken, hypertensie, enz.). <em>Geen naam, geen adres, geen e-mailadres, geen rijksregisternummer.</em> Als u aan een studie deelneemt, de facultatieve <strong>studiecode</strong> die u van het onderzoeksteam kreeg (bijvoorbeeld VS-001).</td>
     </tr>
     <tr>
       <td><strong>Wandelsessies</strong></td>
@@ -191,21 +193,22 @@
   <p>De app gebruikt de gps van uw telefoon <strong>alleen tijdens een wandelsessie die u zelf start</strong>. De opeenvolgende posities dienen om de afgelegde afstand te berekenen en worden daarna onmiddellijk verworpen.</p>
   <div class="highlight">
     <p><strong>Locatie op de achtergrond.</strong> Om te blijven meten wanneer uw scherm vergrendeld is of uw telefoon in uw zak zit, kan de app uw locatie ook op de achtergrond raadplegen. Dit wordt in de app uitgelegd vóór er om toestemming wordt gevraagd, en u mag weigeren: de sessie werkt dan enkel zolang de app op het scherm openstaat.</p>
-    <p style="margin-bottom:0"><strong>Er wordt geen route bewaard.</strong> Alleen de totale afstand van de sessie wordt bijgehouden. Uw gps-coördinaten verlaten uw telefoon hiervoor nooit, worden niet gehistoriseerd, niet gedeeld en niet gebruikt voor reclamedoeleinden.</p>
+    <p style="margin-bottom:0"><strong>Er wordt geen route bewaard.</strong> Alleen de totale afstand van de sessie wordt bijgehouden. Uw gps-coördinaten verlaten uw telefoon hiervoor nooit, worden niet in een historiek bijgehouden, niet gedeeld en niet gebruikt voor reclamedoeleinden.</p>
   </div>
-  <p>Eén uitzondering, met uw locatietoestemming: om weersadvies bij uw sessie te tonen, wordt een <strong>bij benadering</strong> bepaalde positie doorgestuurd naar de dienst <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Die aanvraag bevat geen gezondheidsgegevens en geen identificator van u.</p>
+  <p>Eén uitzondering, met uw locatietoestemming: om weersadvies bij uw sessie te tonen, wordt een <strong>bij benadering</strong> bepaalde positie, afgerond op ongeveer 1 km, doorgestuurd naar de dienst <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Die aanvraag bevat geen gezondheidsgegevens en geen identificator van u.</p>
 
   <h2>4. Doeleinden en rechtsgrond</h2>
   <ul>
     <li><strong>De werking van de app verzekeren</strong> (uw sessies, voortgang en rapporten opslaan en tonen) — rechtsgrond: uw <strong>uitdrukkelijke toestemming</strong> (art. 6.1.a en art. 9.2.a AVG), gegeven bij het eerste gebruik.</li>
     <li><strong>U toelaten een rapport te delen met uw arts</strong>, als u ervoor kiest het te exporteren.</li>
+    <li><strong>De opvolging van een studie</strong>, alleen als u een studiecode hebt ingevoerd: het onderzoeksteam raadpleegt uw gegevens dan onder die code, zonder uw identiteit te kennen — zelfde rechtsgrond.</li>
   </ul>
   <p>Uw gegevens worden voor <strong>geen enkel ander doel</strong> gebruikt: geen reclame, geen profilering, geen doorverkoop, geen geautomatiseerde besluitvorming.</p>
 
   <h2>5. Waar uw gegevens worden bewaard</h2>
   <ul>
     <li><strong>Op uw telefoon</strong>, in de private opslag van de app.</li>
-    <li><strong>Op een Supabase-server</strong> (Supabase Inc.), gehost in de regio <span id="nl-region">Frankfurt, Duitsland (Europese Unie — eu-central-1)</span>, zodat uw sessies niet verloren gaan. De toegang tot uw records is vergrendeld met <em>Row Level Security</em>-regels: enkel uw toestel kan uw gegevens lezen.</li>
+    <li><strong>Op een Supabase-server</strong> (Supabase Inc.), gehost in de regio <span id="nl-region">Frankfurt, Duitsland (Europese Unie — eu-central-1)</span>, zodat uw sessies niet verloren gaan. De toegang is vergrendeld met <em>Row Level Security</em>-regels: uw toestel kan enkel uw eigen gegevens lezen, en geen enkele andere gebruiker heeft er toegang toe. De verwerkingsverantwoordelijke beschikt over een beveiligde beheerderstoegang, uitsluitend voor technisch onderhoud en, als u een studiecode hebt ingevoerd, voor de opvolging van de studie.</li>
   </ul>
   <p>De verbinding met de server is <strong>anoniem</strong>: de app maakt een willekeurige technische identificator aan, zonder e-mailadres of wachtwoord. Uw records zijn dus aan geen enkele burgerlijke identiteit gekoppeld.</p>
 
@@ -215,11 +218,12 @@
     <tr><th>Dienstverlener</th><th>Rol</th><th>Ontvangen gegevens</th></tr>
     <tr><td>Supabase Inc.</td><td>Hosting van de database</td><td>Profiel, sessies, WIQ-resultaten (zonder identiteit)</td></tr>
     <tr><td>Open-Meteo</td><td>Weersvoorspelling</td><td>Enkel de positie bij benadering</td></tr>
+    <tr><td>Expo (650 Industries Inc.)</td><td>Updates van de app</td><td>Technische toestelgegevens (IP-adres, versie van de app en het systeem), geen gezondheidsgegevens</td></tr>
   </table>
   <p>Er worden geen gegevens verkocht, verhuurd of doorgegeven aan reclamebedrijven, datahandelaars, verzekeraars of werkgevers.</p>
 
   <h2>7. Bewaartermijn</h2>
-  <p>Uw gegevens worden bewaard zolang u de app gebruikt. Ze worden gewist zodra u daarom vraagt — zie het volgende punt. Verwijdert u de app zonder uw gegevens te wissen, dan wordt de serverkopie uiterlijk <strong>24 maanden</strong> na uw laatste sessie gewist.</p>
+  <p>Uw gegevens worden bewaard tot u ze wist. Ze worden verwijderd zodra u daarom vraagt — zie het volgende punt. Wis ze vanuit de app voordat u de app verwijdert: het verwijderen van de app alleen wist de serverkopie niet.</p>
 
   <h2>8. Uw gegevens wissen</h2>
   <p>In de app: <strong>Profiel → Al mijn gegevens verwijderen</strong>. De verwijdering is onmiddellijk en definitief, zowel op uw telefoon als op de server.</p>
@@ -265,7 +269,7 @@
     <tr><th>Category</th><th>Detail</th></tr>
     <tr>
       <td><strong>Profile</strong></td>
-      <td>Age, sex, cardiovascular risk factors you declare (diabetes, smoking, hypertension, etc.). <em>No name, no address, no email, no national ID number.</em></td>
+      <td>Age, sex, cardiovascular risk factors you declare (diabetes, smoking, hypertension, etc.). <em>No name, no address, no email, no national ID number.</em> If you take part in a study, the optional <strong>study code</strong> given to you by the research team (for example VS-001).</td>
     </tr>
     <tr>
       <td><strong>Walking sessions</strong></td>
@@ -286,21 +290,22 @@
   <p>The app uses your phone's GPS <strong>only during a walking session you started yourself</strong>. Successive positions are used to compute the distance covered, then immediately discarded.</p>
   <div class="highlight">
     <p><strong>Background location.</strong> So the measurement keeps running when your screen is locked or your phone is in your pocket, the app may access your location while it is not on screen. This access is explained inside the app before any permission is requested, and you may decline: the session will then only work while the app stays open on screen.</p>
-    <p style="margin-bottom:0"><strong>No route is stored.</strong> Only the total distance of the session is kept. Your GPS coordinates never leave your phone for this purpose, are not historised, not shared, and not used for any advertising targeting.</p>
+    <p style="margin-bottom:0"><strong>No route is stored.</strong> Only the total distance of the session is kept. Your GPS coordinates never leave your phone for this purpose, are never kept as a history, never shared, and never used for advertising.</p>
   </div>
-  <p>One exception, subject to your location permission: to display weather advice for your session, an <strong>approximate</strong> position is sent to the <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> service. That request contains no health data and no identifier relating to you.</p>
+  <p>One exception, subject to your location permission: to display weather advice for your session, an <strong>approximate</strong> position, rounded to about 1 km, is sent to the <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> service. That request contains no health data and no identifier relating to you.</p>
 
   <h2>4. Purposes and legal basis</h2>
   <ul>
     <li><strong>Operating the app</strong> (recording and displaying your sessions, progress and reports) — legal basis: your <strong>explicit consent</strong> (Art. 6(1)(a) and Art. 9(2)(a) GDPR), collected on first use.</li>
     <li><strong>Letting you share a report with your doctor</strong>, if you choose to export one.</li>
+    <li><strong>Following a study</strong>, only if you entered a study code: the research team then views your data under that code, without knowing who you are — same legal basis.</li>
   </ul>
   <p>Your data is used for <strong>no other purpose</strong>: no advertising, no profiling, no resale, no automated decision-making.</p>
 
   <h2>5. Where your data is stored</h2>
   <ul>
     <li><strong>On your phone</strong>, in the app's private storage.</li>
-    <li><strong>On a Supabase server</strong> (Supabase Inc.), hosted in the <span id="en-region">Frankfurt, Germany (European Union — eu-central-1)</span> region, so your sessions are not lost. Access to your records is locked down by row level security rules: only your device can read your data.</li>
+    <li><strong>On a Supabase server</strong> (Supabase Inc.), hosted in the <span id="en-region">Frankfurt, Germany (European Union — eu-central-1)</span> region, so your sessions are not lost. Access is locked down by row level security rules: your device can only read your own data, and no other user can access it. The data controller has a protected administrator access, used only for technical maintenance and, if you entered a study code, for following the study.</li>
   </ul>
   <p>The connection to the server is <strong>anonymous</strong>: the app creates a random technical identifier, with no email and no password. Your records are therefore not tied to any civil identity.</p>
 
@@ -310,11 +315,12 @@
     <tr><th>Provider</th><th>Role</th><th>Data received</th></tr>
     <tr><td>Supabase Inc.</td><td>Database hosting</td><td>Profile, sessions, WIQ results (without identity)</td></tr>
     <tr><td>Open-Meteo</td><td>Weather forecast</td><td>Approximate position only</td></tr>
+    <tr><td>Expo (650 Industries Inc.)</td><td>App updates</td><td>Technical device data (IP address, app and system version), no health data</td></tr>
   </table>
   <p>No data is sold, rented, or passed to advertising networks, data brokers, insurers or employers.</p>
 
   <h2>7. Retention</h2>
-  <p>Your data is kept for as long as you use the app. It is deleted as soon as you request it — see the next section. If you uninstall the app without deleting your data, the server copy is erased at the latest <strong>24 months</strong> after your last session.</p>
+  <p>Your data is kept until you delete it. It is erased as soon as you request it — see the next section. Please delete it from within the app before uninstalling: uninstalling alone does not erase the server copy.</p>
 
   <h2>8. Deleting your data</h2>
   <p>In the app: <strong>Profile → Delete all my data</strong>. Deletion is immediate and permanent, both on your phone and on the server.</p>
@@ -346,21 +352,29 @@
 </footer>
 
 <script>
+  // L'en-tête suit la langue choisie (il restait en français auparavant).
+  const HEAD = {
+    fr: { title: 'VascuStep — Politique de confidentialité', updated: 'Dernière mise à jour : 29 septembre 2026' },
+    nl: { title: 'VascuStep — Privacybeleid',                 updated: 'Laatst bijgewerkt: 29 september 2026' },
+    en: { title: 'VascuStep — Privacy policy',                updated: 'Last updated: 29 September 2026' },
+  };
   const tabs = document.querySelectorAll('nav button');
   const panes = document.querySelectorAll('section.lang');
   function show(lang) {
     tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.lang === lang)));
     panes.forEach(p => { p.hidden = (p.id !== lang); });
     document.documentElement.lang = lang;
+    document.title = HEAD[lang].title;
+    document.getElementById('page-title').textContent = HEAD[lang].title;
+    document.getElementById('page-updated').textContent = HEAD[lang].updated;
     history.replaceState(null, '', '#' + lang);
   }
   tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.lang)));
+  // Langue : celle demandée par l'app (#fr, #nl, #en), sinon celle du navigateur.
+  // Toute autre langue que le français ou le néerlandais ouvre l'anglais.
   const initial = location.hash.replace('#', '');
-  if (['fr', 'nl', 'en'].includes(initial)) show(initial);
-  else {
-    const nav = (navigator.language || 'fr').slice(0, 2);
-    if (['nl', 'en'].includes(nav)) show(nav);
-  }
+  const nav = (navigator.language || 'en').slice(0, 2);
+  show(['fr', 'nl', 'en'].includes(initial) ? initial : ['fr', 'nl'].includes(nav) ? nav : 'en');
 </script>
 
 </body>
